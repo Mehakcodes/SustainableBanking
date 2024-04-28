@@ -5,6 +5,8 @@ import GreenInvestmentPage from "./pages/GreenInvestmentPage";
 import CreditHubPage from "./pages/CreditHubPage";
 import ImpactPage from "./pages/ImpactPage";
 import CarbonCoinPage from "./pages/CarbonCoinPage";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -48,6 +50,16 @@ function App() {
                   Carbon Coin
                 </Link>
               </li>
+              <li>
+                <Link to="/Login" className="hover:text-green-600">
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/Signup" className="hover:text-green-600">
+                  Sign Up
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -61,6 +73,8 @@ function App() {
           <Route path="/CreditHub" element={<CreditHubPage />} />
           <Route path="/Impact" element={<ImpactPage />} />
           <Route path="/CarbonCoin" element={<CarbonCoinPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
         </Routes>
       </div>
     </div>
