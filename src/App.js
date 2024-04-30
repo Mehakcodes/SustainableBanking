@@ -8,9 +8,11 @@ import CarbonCoinPage from "./pages/CarbonCoinPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
+
 function App() {
   return (
     <div>
+      
       <header>
         <nav className="bg-black text-white fixed top-0 w-full z-10">
           <div className="flex justify-between items-center px-16 py-7">
