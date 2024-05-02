@@ -1,8 +1,21 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { BiSolidHide } from "react-icons/bi";
+import {ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { registerRoute } from '../utils/APIRoutes';
 
 const Signup = () => {
+  const navigate = useNavigate();
+
+  useEffect( () => {
+    if(localStorage.getItem("customer")) {
+      //if already logged in
+      navigate('/');
+    }
+  } );
+
   const [formDetails, setFormDetails] = useState({
     email: "",
     phone: "",
@@ -26,16 +39,83 @@ const Signup = () => {
     }));
   }
 
-  function btnHandler(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(formDetails);
-    // Add code for signing up the user
-  }
+    if(handleValidation()) {
+      const {email ,
+          phone ,
+          createPassword ,
+          name ,
+          dob,
+          panNo ,
+          adhaarCardNo ,
+          currentAddress ,
+          permanentAddress ,
+          nationality ,
+          accountType} = formDetails;
+      const {data} = await axios.post(registerRoute, {email ,
+          phone ,
+          createPassword ,
+          name ,
+          dob,
+          panNo ,
+          adhaarCardNo ,
+          currentAddress ,
+          permanentAddress ,
+          nationality ,
+          accountType});
+      
+      if(data.status === false) {
+        toast.error(data.msg, toastOptions);
+      }
+
+      if(data.status === true) {
+        localStorage.setItem('customer', JSON.stringify(data.user.email));
+        navigate("/");
+      }
+
+    }
+  };
+
+  const toastOptions = {
+    position: "bottom-right",
+    autoClose: 8000,
+    theme: "dark",
+    pauseOnHover: true,
+    draggable: true
+  };
+
+  const handleValidation = () => {
+    const {email ,
+      phone ,
+      createPassword ,
+      confirmPassword,
+      name ,
+      dob,
+      panNo ,
+      adhaarCardNo ,
+      currentAddress ,
+      permanentAddress ,
+      nationality ,
+      accountType} = formDetails;
+    if (createPassword.length < 8) {
+      toast.error("Password should be greater than 8 characters.", toastOptions);
+      return false;
+    } else if(createPassword !== confirmPassword) {
+      toast.error("password and confirm password should be same.", toastOptions);
+      return false;
+    } else if(email === "") {
+      toast.error("Email is required", toastOptions);
+      return false;
+    }
+
+    return true;
+  };
 
   return (
     <div className="whole-form-page">
       <div className="pt-24 px-16 pb-14">
-        <form onSubmit={btnHandler} className="main bg-white form-login">
+        <form onSubmit={handleSubmit} className="main bg-white form-login">
           <div className="font-bold text-3xl pb-6">Sign Up for your account</div>
           <label htmlFor="name" className="pb-2 text-lg">Name</label>
           <input
@@ -170,6 +250,7 @@ const Signup = () => {
         
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
