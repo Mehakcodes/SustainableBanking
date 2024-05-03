@@ -14,7 +14,7 @@ function App() {
     <div>
       
       <header>
-        <nav className="bg-black text-white fixed top-0 w-full z-10">
+        <nav className="bg-white text-black colr fixed top-0 w-full z-10">
           <div className="flex justify-between items-center px-16 py-7">
             <div>
               <Link to="/" className="font-bold">

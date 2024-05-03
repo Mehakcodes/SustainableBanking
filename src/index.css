@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .imgg{
-    height: 27rem;
+    height: 34rem;
 }
 
 .loans2{
@@ -11,7 +11,7 @@
     height: 22rem;
 }
 .loanbox{
-    height: 30rem;
+    height: 28rem;
     width: 19rem;
     border: black 1px solid;
     border-radius: 2rem;
@@ -70,7 +70,7 @@ button{
     height: 2rem;
     color: white;
     font-weight: 600;
-    background-color: #97144d;
+    background-color: #16a34a;
     border: none;
 }
 .form-login{
@@ -83,4 +83,7 @@ button{
 }
 .firsttime{
     text-align: center;
+}
+.colr{
+    color: #000000bf;
 }
