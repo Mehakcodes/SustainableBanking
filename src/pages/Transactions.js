@@ -32,7 +32,7 @@ const Transactions = () => {
     ]
     return ( 
         <div className="transactions">
-            <h1>Transactions</h1>
+            <h1 className="pb-3 text-3xl font-bold text-center mt-8"   >Transactions</h1>
             <TransactionTable data={transactionData}/>
         </div>
      );
