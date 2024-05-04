@@ -63,35 +63,35 @@ const Home = () => {
         Explore our cutting-edge E-Banking solutions. Enjoy convenient, eco-friendly banking from anywhere, anytime. Let's make digital banking the green way. "
         imageUrl1="https://images.pexels.com/photos/2988232/pexels-photo-2988232.jpeg"
         imageUrl2="https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg"
-        linkUrl="/right-home-1"
+        linkUrl="/E-Banking"
       />
       <LeftHome
         title="Green Investment Opportunities "
         content="Invest in a sustainable future with our range of green investment opportunities. Grow your wealth while supporting environmentally friendly projects and initiatives that make a positive impact on the planet."
         imageUrl1="https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg"
         imageUrl2="https://images.pexels.com/photos/4497591/pexels-photo-4497591.jpeg"
-        linkUrl="/left-home-1"
+        linkUrl="/Green_Investment"
       />
       <RightHome
         title="Sustainable Credit Solutions "
         content="Access responsible financing solutions tailored to your needs. Whether it's a personal loan for eco-friendly home improvements or a sustainable credit card with competitive rates, we're here to help you make responsible financial decisions."
         imageUrl1="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg"
         imageUrl2="https://images.pexels.com/photos/3850512/pexels-photo-3850512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        linkUrl="/right-home-2"
+        linkUrl="/CreditHub"
       />
       <LeftHome
         title="Impact Calculator: Measure Your Influence"
         content="Use our deposit impact calculator to see the real-world impact of your savings. Understand how your money can contribute to positive environmental and social change, empowering you to make informed financial choices that align with your values."
         imageUrl1="https://images.pexels.com/photos/5217882/pexels-photo-5217882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         imageUrl2="https://images.pexels.com/photos/8297031/pexels-photo-8297031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        linkUrl="/left-home-2"
+        linkUrl="/Impact"
       />
       <RightHome
         title="Carbon Offset Tracker: Neutralize Your Footprint"
         content="Take control of your carbon footprint with our carbon offset tracker. Monitor and offset your emissions by supporting certified carbon offset projects, helping you neutralize your impact on the environment and contribute to a greener future."
         imageUrl1="https://images.pexels.com/photos/2646237/pexels-photo-2646237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         imageUrl2="https://images.pexels.com/photos/3634730/pexels-photo-3634730.jpeg"
-        linkUrl="/right-home-2"
+        linkUrl="/CarbonCoin"
       />
       <Testimonial />
 

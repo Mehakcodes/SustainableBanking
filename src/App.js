@@ -8,6 +8,13 @@ import CarbonCoinPage from "./pages/CarbonCoinPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
+import Agri from "./loans_pages/Agri"
+import AmericanC from "./loans_pages/AmericanC"
+import Assessment from "./loans_pages/Agri"
+import RaiseCap from "./loans_pages/Raise_cap"
+import Business from "./loans_pages/Business"
+import Greenbuild from "./loans_pages/Greenbuild"
+import Vehicle from "./loans_pages/Agri"
 
 // import './pages/Profile';
 import PersonalDetails from "./components/PersonalDetails";
@@ -21,8 +28,9 @@ import RenewableEnergyFunds from "./components/RenewableEnergyFunds";
 import Transactions from "./pages/Transactions";
 import Navbar from "./components/Navbar";
 import { useState , useEffect} from "react";
+import Raise_cap from "./loans_pages/Raise_cap";
 function App() {
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
 
   // useEffect(() => {
   //   const userLoggedIn = localStorage.getItem("customer");
@@ -47,6 +55,7 @@ function App() {
           <Route path="/CarbonCoin" element={<CarbonCoinPage />} />
           <Route path="/Login" element={<Login isLogged={isLogged} setIsLogged={setIsLogged} />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/agri" element={<Home />} />
           <Route exact path="profile" element={<Profile />}>
             <Route
               exact

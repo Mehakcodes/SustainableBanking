@@ -1,6 +1,8 @@
 import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 import CardBanking from "../components/CardBanking";
+import { Link } from "react-router-dom";
+
 
 const CreditHubPage = () => {
   return (
@@ -99,7 +101,9 @@ const CreditHubPage = () => {
             Rs.495 plus applicable taxes)
           </div>
           <div className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
-            <p className="text-white">Apply Now</p>
+            <Link to="/AmericanC" className="text-white">
+              Apply Now
+            </Link>
           </div>
         </div>
         <div className="loanbox text-center">
@@ -135,7 +139,7 @@ const CreditHubPage = () => {
             is listed among our esteemed green investment opportunities..{" "}
           </div>
           <div className="h-11 border-2 mt-14 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
-            <p className="text-white">Apply Now</p>
+            <Link to="/Raise_cap" className="text-white">Apply Now</Link>
           </div>
         </div>
       </div>

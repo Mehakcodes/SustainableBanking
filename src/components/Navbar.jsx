@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; // Import Link component
 
+
 const Navbar = () => {
   const NavItems = [
     {

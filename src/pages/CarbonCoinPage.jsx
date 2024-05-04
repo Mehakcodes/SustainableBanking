@@ -1,9 +1,24 @@
-import React from 'react'
+import React , {useEffect, useRef}from 'react'
+
+const {tableau} = window;
 
 const CarbonCoinPage = () => {
+  const ref = useRef(null);
+  const url = "https://public.tableau.com/views/CustomerDashboard_17148130854820/Dashboard2?:language=en-US&publish=yes&:sid=&:display_count=n&:origin=viz_share_link";
+  
+  function initViz()
+  {
+    new tableau.Viz(ref.current, url);
+  }
+
+  useEffect(()=>{
+    initViz();
+  }, [])
+  
   return (
     <div>
-      cc page
+      <div ref = {ref}>
+      </div>
     </div>
   )
 }

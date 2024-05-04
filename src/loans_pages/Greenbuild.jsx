@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AmericanC = () => {
+const Greenbuild = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const AmericanC = () => {
   )
 }
 
-export default AmericanC
+export default Greenbuild

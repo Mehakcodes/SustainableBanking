@@ -99,7 +99,7 @@ const Login = ({isLogged, setIsLogged}) => {
             <Link to="/forgot-password" className="text-sm text-red-500">Forgot Password?</Link>
           </span>
           <br />
-          <button className="signin">Log In</button>
+          <button className="signin loginbtnn">Log In</button>
           <span className="firsttime pt-1">
             <Link to="/Signup" className="" >First time user? REGISTER HERE</Link>
           </span>

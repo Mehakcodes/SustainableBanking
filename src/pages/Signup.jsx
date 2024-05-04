@@ -243,7 +243,7 @@ const Signup = () => {
           <br></br>
           
 
-          <button className="signin pt-3">Sign Up</button>
+          <button className="signin pt-3 loginbtnn">Sign Up</button>
           <span className="firsttime pt-1">
             <Link to="/Login" className="">Already have an account? Log in</Link>
           </span>
