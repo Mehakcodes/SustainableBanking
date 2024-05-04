@@ -8,13 +8,6 @@ import CarbonCoinPage from "./pages/CarbonCoinPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
-import Agri from "./loans_pages/Agri"
-import AmericanC from "./loans_pages/AmericanC"
-import Assessment from "./loans_pages/Agri"
-import RaiseCap from "./loans_pages/Raise_cap"
-import Business from "./loans_pages/Business"
-import Greenbuild from "./loans_pages/Greenbuild"
-import Vehicle from "./loans_pages/Agri"
 
 // import './pages/Profile';
 import PersonalDetails from "./components/PersonalDetails";
@@ -48,6 +41,14 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/CreditHub/AmericanC" element={<AmericanC />} />
+          <Route path="/CreditHub/agri" element={<Agri />} />
+          <Route path="/CreditHub/assessment" element={<Assessment />} />
+          <Route path="/CreditHub/business" element={<Business />} />
+          <Route path="/CreditHub/green_build" element={<Greenbuild />} />
+          <Route path="/CreditHub/raise_cap" element={<RaiseCap />} />
+          <Route path="/CreditHub/vehicle" element={<Vehicle />} /> */}
+
           <Route path="/E-Banking" element={<EBankingPage />} />
           <Route path="/Green_Investment" element={<GreenProjects />} />
           <Route path="/CreditHub" element={<CreditHubPage />} />
@@ -55,7 +56,7 @@ function App() {
           <Route path="/CarbonCoin" element={<CarbonCoinPage />} />
           <Route path="/Login" element={<Login isLogged={isLogged} setIsLogged={setIsLogged} />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/agri" element={<Home />} />
+          
           <Route exact path="profile" element={<Profile />}>
             <Route
               exact

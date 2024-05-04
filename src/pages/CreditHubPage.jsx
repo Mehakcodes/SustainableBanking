@@ -2,11 +2,28 @@ import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 import CardBanking from "../components/CardBanking";
 import { Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Agri from "../loans_pages/Agri"
+import AmericanC from "../loans_pages/AmericanC"
+import Assessment from "../loans_pages/Agri"
+import RaiseCap from "../loans_pages/Raise_cap"
+import Business from "../loans_pages/Business"
+import Greenbuild from "../loans_pages/Greenbuild"
+import Vehicle from "../loans_pages/Agri"
 
 
 const CreditHubPage = () => {
-  return (
+  <Routes>
+  <Route path="/CreditHub/AmericanC" element={<AmericanC />} />
+  <Route path="/CreditHub/agri" element={<Agri />} />
+  <Route path="/CreditHub/assessment" element={<Assessment />} />
+  <Route path="/CreditHub/business" element={<Business />} />
+  <Route path="/CreditHub/green_build" element={<Greenbuild />} />
+  <Route path="/CreditHub/raise_cap" element={<RaiseCap />} />
+  <Route path="/CreditHub/vehicle" element={<Vehicle />} />
+</Routes>
 
+  return (
     <div className=" pb-24 ">
       <div className="relative mb-32">
         <div
@@ -100,11 +117,13 @@ const CreditHubPage = () => {
             First Year Fee: Rs. 495 plus applicable taxes (Second Year onwards:
             Rs.495 plus applicable taxes)
           </div>
-          <div className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
-            <Link to="/AmericanC" className="text-white">
-              Apply Now
-            </Link>
-          </div>
+          <Link to="/CreditHub/AmericanC" >
+            <div  className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
+                <p className="text-white">
+                  Apply Now
+                </p>
+              </div>
+          </Link>
         </div>
         <div className="loanbox text-center">
           <h1 className="text-2xl text-green-700 font-bold ">
@@ -120,9 +139,12 @@ const CreditHubPage = () => {
             Accelerate towards sustainability with a generous 500 bonus points
             awarded on every green loan application.{" "}
           </div>
+          <Link to= "/CreditHub/business">
           <div className="h-11 border-2 mt-12 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
             <p className="text-white">Apply Now</p>
           </div>
+
+          </Link>
         </div>
         <div className="loanbox text-center">
           <h1 className="text-2xl text-green-700 font-bold ">
@@ -138,17 +160,19 @@ const CreditHubPage = () => {
             After approval, gain visibility and access to funds as your venture
             is listed among our esteemed green investment opportunities..{" "}
           </div>
+          <Link to = "/CreditHub/raise_cap" >
           <div className="h-11 border-2 mt-14 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
-            <Link to="/Raise_cap" className="text-white">Apply Now</Link>
+            <p to="/CreditHub/raise_cap" className="text-white">Apply Now</p>
           </div>
+          </Link>
         </div>
       </div>
 
       <div className="p-14">
-        <CardBanking>Green Building Financing</CardBanking>
-        <CardBanking>Sustainable Agricultural Loans</CardBanking>
-        <CardBanking>E-Vehicle Loans</CardBanking>
-        <CardBanking>Environmental Impact Assessment Based Loans</CardBanking>
+      <CardBanking to="/CreditHub/green_build">Green Building Financing</CardBanking>
+      <CardBanking to="/CreditHub/agri">Sustainable Agricultural Loans</CardBanking>
+      <CardBanking to="/CreditHub/vehicle">E-Vehicle Loans</CardBanking>
+      <CardBanking to="/CreditHub/assessment">Environmental Impact Assessment Based Loans</CardBanking>
       </div>
     </div>
   );
