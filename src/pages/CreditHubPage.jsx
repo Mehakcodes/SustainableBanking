@@ -5,7 +5,7 @@ import CardBanking from "../components/CardBanking";
 const CreditHubPage = () => {
   return (
 
-    <div className="pt-20 pb-32 relative">
+    <div className="pt-5 pb-24 ">
       <div className="relative mb-32">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center imgg"

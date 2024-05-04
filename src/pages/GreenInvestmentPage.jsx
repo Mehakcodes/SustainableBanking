@@ -2,7 +2,7 @@ import React from 'react'
 
 const GreenInvestmentPage = () => {
   return (
-    <div>
+    <div className='mt-14'>
       investment
     </div>
   )

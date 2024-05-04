@@ -1,67 +1,60 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BiSolidHide } from "react-icons/bi";
-import {ToastContainer, toast} from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { registerRoute } from '../utils/APIRoutes';
 
-
-const Login = () => {
+const Login = ({isLogged, setIsLogged}) => {
   const navigate = useNavigate();
-
-  useEffect( () => {
-    if(localStorage.getItem("customer")) {
-      //if already logged in
-      navigate('/');
-    }
-  } );
-
-  const [formDetails, setformDetails] = useState({
+  const [formDetails, setFormDetails] = useState({
     email: "",
     password: "",
   });
+  useEffect(() => {
+    if (localStorage.getItem("customer")) {
+      navigate('/');
+    }
+  }, [navigate]);
 
-  function changeHandler(event) {
+  const changeHandler = (event) => {
     const { name, value } = event.target;
-    setformDetails((prev) => ({
+    setFormDetails((prev) => ({
       ...prev,
       [name]: value,
     }));
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if(handleValidation()) {
-      const {email ,
-          password } = formDetails;
-      const {data} = await axios.post(registerRoute, {email ,
-        password});
-      
-      if(data.status === false) {
-        toast.error(data.msg, toastOptions);
-      }
+    if (handleValidation()) {
+      const { email, password } = formDetails;
+      try {
+        const { data } = await axios.post(registerRoute, { email, password });
 
-      if(data.status === true) {
-        localStorage.setItem('customer', JSON.stringify(data.user.email));
-        navigate("/");
+        if (data.status === false) {
+          toast.error(data.msg, toastOptions);
+        } else if (data.status === true) {
+          localStorage.setItem('customer', JSON.stringify(data.user.email));
+          setIsLogged(true); 
+          navigate("/");
+        }
+      } catch (error) {
+        console.error("Error:", error);
       }
-
     }
   };
 
   const handleValidation = () => {
-    const {email ,
-      password} = formDetails;
+    const { email, password } = formDetails;
     if (password.length < 8) {
       toast.error("Password should be greater than 8 characters.", toastOptions);
       return false;
-    } else if(email === "") {
+    } else if (email.trim() === "") {
       toast.error("Email is required", toastOptions);
       return false;
     }
-
     return true;
   };
 
@@ -79,7 +72,6 @@ const Login = () => {
         <form onSubmit={handleSubmit} className="main bg-white form-login">
           <div className="font-bold text-3xl pb-6">Login to your account</div>
           <label htmlFor="email" className="pb-2 text-lg">E-mail ID / Customer ID</label>
-          
           <input
             name="email"
             id="email"
@@ -87,16 +79,13 @@ const Login = () => {
             placeholder="Enter ID"
             value={formDetails.email}
             onChange={changeHandler}
-            
           />
-                    <span>
-            <a href="/forgot-password" className="text-sm text-red-500">Forgot Login ID?</a>
+          <span>
+            <Link to="/forgot-password" className="text-sm text-red-500">Forgot Login ID?</Link>
           </span>
           <br />
-
           <label htmlFor="password" className="pb-2 text-lg">Password</label>
-         
-         <input
+          <input
             name="password"
             id="password"
             type="password"
@@ -105,18 +94,15 @@ const Login = () => {
             onChange={changeHandler}
             className=""
           />
-          <BiSolidHide className="text-red-500 size-6 relative bottom-8 btnn"/>
-
+          <BiSolidHide className="text-red-500 size-6 relative bottom-8 btnn" />
           <span>
-            <a href="/forgot-password" className="text-sm text-red-500">Forgot Password?</a>
+            <Link to="/forgot-password" className="text-sm text-red-500">Forgot Password?</Link>
           </span>
           <br />
-
-          <button className="signin">Sign In</button>
+          <button className="signin">Log In</button>
           <span className="firsttime pt-1">
-          <Link to="/Signup" className="">First time user? REGISTER HERE</Link>
+            <Link to="/Signup" className="" >First time user? REGISTER HERE</Link>
           </span>
-
         </form>
       </div>
       <ToastContainer />

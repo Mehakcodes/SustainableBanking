@@ -4,7 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 const ImpactPage = () => {
 
   return (
-    <div className="mt-20 pb-32 relative">
+    <div className="mt-14 pb-10 relative">
       <div className="relative mb-28">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center imgg "

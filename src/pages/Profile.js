@@ -22,12 +22,12 @@ function Profile() {
   return (
    
       <div className="w-screen">
-        <div className="flex w-screen fixed h-screen justify-stretch">
+        <div className="flex w-full h-screen justify-stretch">
         <Sidebar data={profileItems}/>
        
        
         
-        <div className="grow flex justify-center overflow-scroll ">
+        <div className="grow flex justify-center overflow-x-hidden overflow-y-scroll ">
           <Outlet/>     
         </div>
       </div>
