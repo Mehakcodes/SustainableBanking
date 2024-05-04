@@ -22,7 +22,7 @@ import Transactions from "./pages/Transactions";
 import Navbar from "./components/Navbar";
 import { useState , useEffect} from "react";
 function App() {
-  const [isLogged, setIsLogged] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
 
   // useEffect(() => {
   //   const userLoggedIn = localStorage.getItem("customer");

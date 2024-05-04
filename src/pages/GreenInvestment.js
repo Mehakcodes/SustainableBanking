@@ -23,7 +23,7 @@ const GreenInvestment = () => {
        
     ]
     return (
-        <div className="w-full  mt-14 overflow-x-hidden">
+        <div className="w-full overflow-x-hidden">
         <div className="flex w-screen h-screen justify-stretch">
         <Sidebar data={sidebar_data}/>
        

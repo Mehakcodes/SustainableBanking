@@ -1,61 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link component
+import { NavLink } from 'react-router-dom'; // Import Link component
 
 const Navbar = () => {
+  const NavItems = [
+    {
+      path: "/",
+      title: "Home",
+    },
+    {
+      path: "/E-Banking",
+      title: "E-Banking",
+    },
+    {
+      path: "/green_investment/green_projects",
+      title: "Green Investment",
+    },
+    {
+      path: "/CreditHub",
+      title: "CreditHub",
+    },
+    {
+      path: "/Impact",
+      title: "Impact",
+    },
+    {
+      path: "/CarbonCoin",
+      title: "Carbon Offset Tracker",
+    },
+    {
+      path: "/Login",
+      title: "Login",
+    },
+    {
+      path: "/Signup",
+      title: "Sign Up",
+    }
+  ];
   return (
-    <div>
-      <nav className="bg-black fixed top-0 w-full z-10">
-        <div className="flex justify-between items-center px-16 py-4">
-          <div>
-            <Link to="/" className="font-bold text-white">
-              LOGO
-            </Link>
-          </div>
-          <ul className="flex gap-10 text-xl">
-            <li>
-              <Link to="/" className="hover:text-green-400 text-white">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/E-Banking" className="hover:text-green-400 text-white">
-                E-Banking
-              </Link>
-            </li>
-            <li>
-              <Link to="/Green_Investment" className="hover:text-green-400 text-white">
-                Green Investment
-              </Link>
-            </li>
-            <li>
-              <Link to="/CreditHub" className="hover:text-green-400 text-white">
-                Credit Hub
-              </Link>
-            </li>
-            <li>
-              <Link to="/Impact" className="hover:text-green-400 text-white">
-                Impact
-              </Link>
-            </li>
-            <li>
-              <Link to="/CarbonCoin" className="hover:text-green-400 text-white">
-                Carbon Offset
-              </Link>
-            </li>
-            <li>
-              <Link to="/Login" className="hover:text-green-400 text-white">
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link to="/Signup" className="hover:text-green-400 text-white">
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <nav className="main-nav flex place-content-between bg-black text-white items-center h-14 text-xl" >
+    <h1 className="px-10">Logo</h1>
+    <div className="flex h-full items-stretch">
+        {
+            NavItems.map((item,index) => (
+            
+              <NavLink key={index} to={item.path} className={({ isActive, isPending }) =>
+                isPending ? "hover:bg-green-900 " : isActive ? "bg-green-800/80 px-6 flex h-full items-center justify-center " : "px-6 hover:bg-green-800/[0.3] flex h-full items-center justify-center "
+              }><p>{item.title}</p></NavLink>
+            ))
+        }
+
     </div>
+</nav>
+
   );
 };
 
