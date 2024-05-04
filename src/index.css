@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  /* overflow-x: hidden; */
-}
+
 .imgg{
     height: 34rem;
 }
@@ -141,4 +139,14 @@ legend{
   
   .testimonialBodyText {
     font-size: 1rem;
+  }
+
+  .renew{
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 30rem;
+    justify-items: center;
+  
   }
