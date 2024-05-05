@@ -1,15 +1,15 @@
 const PersonalDetails = () => {
     const details={
-        name:'John Doe',
-        gender:'male',
-        email:'example@gmail.com',
+        name:'Saisha Reddy',
+        gender:'Female',
+        email:'saisha_reddy@gmail.com',
         phone:'1234567890',
         dob:'01/01/2000',
-        address:'1234 Main St',
-        city:'City',
-        state:'State',
-        zip:'12345',
-        country:'Country',
+        address:'901,Coral Springs',
+        city:'Palghar',
+        state:'Maharashtra',
+        zip:'401404',
+        country:'India',
         pan:'ABCDE1234F',
         aadhar:'1234 5678 9012',
     }

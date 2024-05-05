@@ -1,10 +1,10 @@
 const CustomerDetails = () => {
     const cust={
         "Occupation": "Software Engineer",
-        "Nature od Business":"Self Employed",
+        "Nature of Business":"Private Sector",
         "Employment Type":"Salaried",
         "Oraganization Name":"ABC Pvt Ltd",
-        "Oragnisation Location":"Bangalore",
+        "Oragnisation Location":"Maharashtra",
         "Type of Industry":"IT",
         "Oragnisation Type":"Private",
         "Sources of Income":"Salary",
