@@ -20,7 +20,7 @@ const GreenBonds = () => {
         
     },
     {
-        project_name:'Blue Vonds',
+        project_name:'Blue Bonds',
         project_image:'https://images.pexels.com/photos/8844390/pexels-photo-8844390.jpeg'
     },
     {
@@ -31,8 +31,8 @@ const GreenBonds = () => {
 ];
     
     return ( 
-        <div className="Renerdy-funds w-full">
-            <h1 className="text-2xl font-bold m-5">Renewable Energy Funds</h1>
+        <div className=" w-full">
+            <h1 className="text-2xl font-bold m-5"></h1>
             <div className=" renew ">
             {
                 reccommended_projects.map((details)=>(
