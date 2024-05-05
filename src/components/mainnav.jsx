@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
-const MainNav = () => {
+const MainNav = ({isLogged, setIsLogged}) => {
   const NavItems = [
     {
       path: "/",
@@ -36,10 +36,13 @@ const MainNav = () => {
       title: "Logout",
     },
   ];
+  const navigate= useNavigate();
 
   const handleClick = async () => {
+    setIsLogged(false);
     localStorage.clear();
-    Navigate("/");
+    navigate("/");
+
   };
 
   return (

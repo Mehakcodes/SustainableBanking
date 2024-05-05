@@ -33,19 +33,19 @@ import Assessment from "./loans_pages/Assesment"
 
 import { useState , useEffect} from "react";
 function App() {
-  const [isLogged, setIsLogged] = useState(true);
+const [isLogged, setIsLogged] = useState(false);
 
-  // useEffect(() => {
-  //   const userLoggedIn = localStorage.getItem("customer");
-  //   if (userLoggedIn) {
-  //     setIsLogged(true);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const userLoggedIn = localStorage.getItem("customer");
+    if (userLoggedIn) {
+      setIsLogged(true);
+    }
+  }, []);
   return (
     <div>
       <header>
-        {/* <MainNav /> */}
-        {isLogged ? <MainNav/> : <Navbar/>}
+    
+        {isLogged ? <MainNav isLogged={isLogged} setIsLogged={setIsLogged}/> : <Navbar/>}
       </header>
 
       <div>
