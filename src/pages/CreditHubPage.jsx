@@ -167,13 +167,85 @@ const CreditHubPage = () => {
           </div>
           </Link>
         </div>
-      </div>
+        <div className="loanbox text-center ">
+          <h1 className="text-2xl text-green-700 font-bold  ">
+            Green Building Financing
+          </h1>
+          <div className="h-0.5 mt-4  bg-black"></div>
 
-      <div className="p-14">
-      <CardBanking to="/CreditHub/green_build">Green Building Financing</CardBanking>
-      <CardBanking to="/CreditHub/agri">Sustainable Agricultural Loans</CardBanking>
-      <CardBanking to="/CreditHub/vehicle">E-Vehicle Loans</CardBanking>
-      <CardBanking to="/CreditHub/assessment">Environmental Impact Assessment Based Loans</CardBanking>
+          <div className="mt-5 text-justify	text-sm">
+          Get financial assistance for the construction, renovation, or retrofitting of environmentally friendly and energy-efficient buildings.          </div>
+          <div className="text-justify	text-sm font-bold mt-5">
+          It aims to reduce resource consumption, minimize environmental impact, and promote sustainability in the built environment.
+          </div>
+          <Link to="/CreditHub/green_build" >
+            <div  className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
+                <p className="text-white">
+                  Apply Now
+                </p>
+              </div>
+          </Link>
+        </div>
+        <div className="loanbox text-center ">
+          <h1 className="text-2xl text-green-700 font-bold  ">
+            Sustainable Agricultural Loans
+          </h1>
+          <div className="h-0.5 mt-4  bg-black"></div>
+
+          <div className="mt-5 text-justify	text-sm">
+          Support farmers and agricultural businesses in implementing environmentally friendly and socially responsible farming practices.
+          </div>
+          <div className="text-justify	text-sm font-bold mt-5">
+          Funds for initiatives such as organic farming, conservation agriculture, renewable energy adoption, aiming to enhance agricultural sustainability and resilience.
+          </div>
+          <Link to="/CreditHub/agri" >
+            <div  className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
+                <p className="text-white">
+                  Apply Now
+                </p>
+              </div>
+          </Link>
+        </div>
+        <div className="loanbox text-center ">
+          <h1 className="text-2xl text-green-700 font-bold  ">
+            Electronic vehicle Loans
+          </h1>
+          <div className="h-0.5 mt-4  bg-black"></div>
+
+          <div className="mt-5 text-justify	text-sm">
+          Facilitate the purchase or lease of electric vehicles (EVs) for individuals or businesses.
+          </div>
+          <div className="text-justify	text-sm font-bold mt-5">
+          Get favorable terms, such as low-interest rates or flexible repayment options, for adoption of electric transportation and reduce greenhouse gas emissions from the automotive sector.
+          </div>
+          <Link to="/CreditHub/vehicle" >
+            <div  className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
+                <p className="text-white">
+                  Apply Now
+                </p>
+              </div>
+          </Link>
+        </div>
+        <div className="loanbox text-center ">
+          <h1 className="text-2xl text-green-700 font-bold  ">
+          Environmental Impact Assessment Based Loans
+          </h1>
+          <div className="h-0.5 mt-4  bg-black"></div>
+
+          <div className="mt-5 text-justify	text-sm">
+          Get EIA based loans for your projects upon the approval of assessment of the potential environmental impacts.
+          </div>
+          <div className="text-justify	text-sm font-bold mt-5">
+          Ensure that proposed activities adhere to environmental regulations, mitigate negative environmental effects, and promote sustainable development practices.
+          </div>
+          <Link to="/CreditHub/assessment" >
+            <div  className="h-11 border-2 mt-8 py-2 bg-green-700 hover:bg-green-600 cursor-pointer">
+                <p className="text-white">
+                  Apply Now
+                </p>
+              </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
