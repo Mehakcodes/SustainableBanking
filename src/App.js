@@ -22,6 +22,15 @@ import RenewableEnergyFunds from "./components/RenewableEnergyFunds";
 import Transactions from "./pages/Transactions";
 import Navbar from "./components/Navbar";
 import Invest from "./pages/Invest";
+import AmericanC from "./loans_pages/AmericanC";
+import Agri from "./loans_pages/Agri";
+import Business from "./loans_pages/Business";
+import Greenbuild from "./loans_pages/Greenbuild";
+import RaiseCap from "./loans_pages/Raise_cap";
+import Vehicle from "./loans_pages/Vehicle"
+import Assessment from "./loans_pages/Assesment"
+
+
 import { useState , useEffect} from "react";
 function App() {
   const [isLogged, setIsLogged] = useState(true);
@@ -42,13 +51,13 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/CreditHub/AmericanC" element={<AmericanC />} />
+          <Route path="/CreditHub/AmericanC" element={<AmericanC />} />
           <Route path="/CreditHub/agri" element={<Agri />} />
           <Route path="/CreditHub/assessment" element={<Assessment />} />
           <Route path="/CreditHub/business" element={<Business />} />
           <Route path="/CreditHub/green_build" element={<Greenbuild />} />
           <Route path="/CreditHub/raise_cap" element={<RaiseCap />} />
-          <Route path="/CreditHub/vehicle" element={<Vehicle />} /> */}
+          <Route path="/CreditHub/vehicle" element={<Vehicle />} />
 
           <Route path="/E-Banking" element={<EBankingPage />} />
           <Route path="/Green_Investment" element={<GreenProjects />} />
