@@ -8,7 +8,7 @@ const Invest = () => {
             <p className="mb-3">
             {details.company_name}
             </p>
-            <img src={details.project_image} alt="" className="w-full h-[25rem] rounded-xl object-cover"/>
+            <img src={details.project_image} alt="" className="w-full h-[25rem] md:h-[35rem] rounded-xl object-cover"/>
             <div className="flex flex-wrap my-4">
         <p className="me-2 border-solid border px-2 rounded-xl  hover:bg-green-400/10">{details.project_category}</p>
         <p className="border-solid border px-2 rounded-xl  hover:bg-green-400/10">{details.project_location}</p>
