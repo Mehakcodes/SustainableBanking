@@ -8,6 +8,7 @@ import CarbonCoinPage from "./pages/CarbonCoinPage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
+import FundTransfer from "./components/ebankingpages/FundTransfer"
 
 // import './pages/Profile';
 import PersonalDetails from "./components/PersonalDetails";
@@ -56,7 +57,8 @@ function App() {
           <Route path="/CarbonCoin" element={<CarbonCoinPage />} />
           <Route path="/Login" element={<Login isLogged={isLogged} setIsLogged={setIsLogged} />} />
           <Route path="/Signup" element={<Signup />} />
-          
+          <Route path="/Green_Investment/fund_transfer" element={<FundTransfer />} />
+
           <Route exact path="profile" element={<Profile />}>
             <Route
               exact
