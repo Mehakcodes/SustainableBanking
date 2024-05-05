@@ -27,7 +27,7 @@ const EBankingPage = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center items-center mt-12 mx-20">
-        <CardBanking to="/fund-transfer">Fund Transfer</CardBanking>
+        <CardBanking to="/Green_Investment/fund_transfer">Fund Transfer</CardBanking>
         <CardBanking to="/bill-payment">Bill Payment</CardBanking>
         <CardBanking to="/recharge">Recharge</CardBanking>
         <CardBanking to="/cards">Cards</CardBanking>
