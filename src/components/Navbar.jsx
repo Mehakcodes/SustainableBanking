@@ -39,7 +39,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="main-nav flex place-content-between bg-black text-white items-center h-14 text-xl" >
-    <h1 className="px-10">Logo</h1>
+    <h1 className="px-10 font-bold">EcoFin Horizon</h1>
     <div className="flex h-full items-stretch">
         {
             NavItems.map((item,index) => (

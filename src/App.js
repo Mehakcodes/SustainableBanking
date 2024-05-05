@@ -65,13 +65,14 @@ const [isLogged, setIsLogged] = useState(false);
           <Route path="/Impact" element={<ImpactPage />} />
           <Route path="/CarbonCoin" element={<CarbonCoinPage />} />
           <Route path="/Login" element={<Login isLogged={isLogged} setIsLogged={setIsLogged} />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Signup" element={<Signup  isLogged={isLogged} setIsLogged={setIsLogged} />} />
           <Route path="/Green_Investment/fund_transfer" element={<FundTransfer />} />
 
           <Route exact path="profile" element={<Profile />}>
             <Route
               exact
               path="personal_details"
+              
               element={<PersonalDetails />}
             />
             <Route

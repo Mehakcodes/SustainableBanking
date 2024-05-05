@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { registerRoute } from '../utils/APIRoutes';
 
-const Signup = () => {
+const Signup = ( {isLogged, setIsLogged}) => {
   const navigate = useNavigate();
 
   useEffect( () => {
@@ -70,7 +70,9 @@ const Signup = () => {
       }
 
       if(data.status === true) {
+
         localStorage.setItem('customer', JSON.stringify(data.user.email));
+        setIsLogged(true); 
         navigate("/");
       }
 
