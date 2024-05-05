@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@truffle/hdwallet-provider": "^2.1.15",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-alice-carousel": "^2.9.1",
@@ -15,7 +17,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
     "swiper": "^11.1.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
   },
   "scripts": {
     "start": "react-scripts start",
