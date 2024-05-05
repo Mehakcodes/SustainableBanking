@@ -1,5 +1,4 @@
 import {useNavigate} from "react-router-dom";
-import { Navigate, redirect } from "react-router-dom";
 const InvCard = (props) => {
   const navigate = useNavigate();
     const details=props.data;

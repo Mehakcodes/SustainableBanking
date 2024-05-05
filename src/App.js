@@ -33,6 +33,8 @@ import CarbonTrading from "./pages/CarbonTrading";
 
 
 import { useState , useEffect} from "react";
+import GreenBonds from "./components/GreenBonds";
+import GreenStocks from "./components/GreenStocks";
 function App() {
 const [isLogged, setIsLogged] = useState(false);
 
@@ -91,8 +93,8 @@ const [isLogged, setIsLogged] = useState(false);
               path="Renewable_Energy_Funds"
               element={<RenewableEnergyFunds />}
             />
-            <Route path="Green_Bonds" element={<h1>Green Bonds</h1>} />
-            <Route path="Green_Stocks" element={<h1>Green Stocks</h1>} />
+            <Route path="Green_Bonds" element={<GreenBonds/>} />
+            <Route path="Green_Stocks" element={<GreenStocks/>} />
             <Route path="" element={<Navigate to="Green_Projects" />} />
           </Route>
 
