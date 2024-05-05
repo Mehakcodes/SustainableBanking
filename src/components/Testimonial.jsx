@@ -49,7 +49,7 @@ const Testimonial = () => {
   // };
 
   return (
-    <div className="w-full min-h-[80vh] bg-gray-100 py-8 px-10 relative">
+    <div className="w-full pb-10  bg-gray-100 pt-8 px-10 relative">
       <h1 className="text-5xl font-medium text-center mb-8">
       Real Stories, Real Impact 
       </h1>
