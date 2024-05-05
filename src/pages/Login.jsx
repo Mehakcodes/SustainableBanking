@@ -4,7 +4,7 @@ import { BiSolidHide } from "react-icons/bi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { registerRoute } from '../utils/APIRoutes';
+import { loginRoute } from '../utils/APIRoutes';
 
 const Login = ({isLogged, setIsLogged}) => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const Login = ({isLogged, setIsLogged}) => {
     if (handleValidation()) {
       const { email, password } = formDetails;
       try {
-        const { data } = await axios.post(registerRoute, { email, password });
+        const { data } = await axios.post(loginRoute, { email, password });
 
         if (data.status === false) {
           toast.error(data.msg, toastOptions);
