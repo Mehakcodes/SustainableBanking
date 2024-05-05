@@ -1,4 +1,4 @@
-import { Route, Link, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import EBankingPage from "./pages/EBankingPage";
 import GreenInvestmentPage from "./pages/GreenInvestmentPage";
@@ -20,8 +20,8 @@ import GreenProjects from "./components/GreenProjects";
 import RenewableEnergyFunds from "./components/RenewableEnergyFunds";
 import Transactions from "./pages/Transactions";
 import Navbar from "./components/Navbar";
+import Invest from "./pages/Invest";
 import { useState , useEffect} from "react";
-import Raise_cap from "./loans_pages/Raise_cap";
 function App() {
   const [isLogged, setIsLogged] = useState(true);
 
@@ -83,6 +83,7 @@ function App() {
           </Route>
 
           <Route path="Transactions" element={<Transactions />} />
+          <Route path="Invest" element={<Invest/>} />
         </Routes>
       </div>
       <Footer/>

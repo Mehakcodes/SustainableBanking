@@ -12,6 +12,11 @@ const Home = () => {
 
   return (
     <div className="">
+      {/* <div className="h-[89dvh] relative z-0">
+      <video className="kb-blocks-bg-video w-full h-full object-cover object-right-top relative z-0" poster="https://cri.nccf.in/wp-content/uploads/2021/08/Poster_BG.jpg" playsInline autoPlay muted loop>
+        <source src="https://cri.nccf.in/wp-content/uploads/2021/08/forest_Road_slow_st.mp4" type="video/mp4" />
+      </video>
+      /</div> */}
       <div className=" pt-36 flex px-36 gap-20 pb-24">
         <div className="flex flex-col pt-12">
           <div className="text-5xl font-semibold pb-8 ">

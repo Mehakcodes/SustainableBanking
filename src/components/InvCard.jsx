@@ -1,4 +1,7 @@
+import {useNavigate} from "react-router-dom";
+import { Navigate, redirect } from "react-router-dom";
 const InvCard = (props) => {
+  const navigate = useNavigate();
     const details=props.data;
     function MouseOver(event) {
         const desc= event.currentTarget.getElementsByClassName("description");
@@ -35,7 +38,12 @@ const InvCard = (props) => {
         <p className="border-solid border px-2 rounded-xl text-sm  hover:bg-green-400/10">{details.project_location}</p>
         </div>
         <div className=" grow flex justify-center items-end mt-3">
-            <button className="bg-green-500/50 py-1 px-3 rounded-md hover:bg-green-500/80" >Invest</button>
+            <button className="bg-green-500/50 py-1 px-3 rounded-md hover:bg-green-500/80" onClick={
+                ()=>{
+                  
+                  navigate("/Invest", {state: {project: details}, replace: true});
+                }
+            } >Invest</button>
         </div>
         </div>
         </div>
