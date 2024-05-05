@@ -29,6 +29,10 @@ const Navbar = () => {
       title: "Carbon Offset Tracker",
     },
     {
+      path: "/CarbonTrading",
+      title: "Carbon Trading"
+    },
+    {
       path: "/Login",
       title: "Login",
     },
@@ -36,6 +40,7 @@ const Navbar = () => {
       path: "/Signup",
       title: "Sign Up",
     }
+
   ];
   return (
     <nav className="main-nav flex place-content-between bg-black text-white items-center h-14 text-xl" >

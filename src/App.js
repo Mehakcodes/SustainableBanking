@@ -29,6 +29,7 @@ import Greenbuild from "./loans_pages/Greenbuild";
 import RaiseCap from "./loans_pages/Raise_cap";
 import Vehicle from "./loans_pages/Vehicle"
 import Assessment from "./loans_pages/Assesment"
+import CarbonTrading from "./pages/CarbonTrading";
 
 
 import { useState , useEffect} from "react";
@@ -60,6 +61,7 @@ const [isLogged, setIsLogged] = useState(false);
           <Route path="/CreditHub/vehicle" element={<Vehicle />} />
 
           <Route path="/E-Banking" element={<EBankingPage />} />
+          <Route path="/CarbonTrading" element={<CarbonTrading />} />
           <Route path="/Green_Investment" element={<GreenProjects />} />
           <Route path="/CreditHub" element={<CreditHubPage />} />
           <Route path="/Impact" element={<ImpactPage />} />
@@ -72,7 +74,7 @@ const [isLogged, setIsLogged] = useState(false);
             <Route
               exact
               path="personal_details"
-              
+
               element={<PersonalDetails />}
             />
             <Route

@@ -28,13 +28,17 @@ const MainNav = ({isLogged, setIsLogged}) => {
       title: "Carbon Offset Tracker",
     },
     {
+      path: "/CarbonTrading",
+      title: "Carbon Trading"
+    },
+    {
       path: "/Profile",
       title: "Profile",
     },
     {
       path: "/",
       title: "Logout",
-    },
+    }
   ];
   const navigate= useNavigate();
 
