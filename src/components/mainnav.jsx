@@ -8,6 +8,10 @@ const MainNav = ({isLogged, setIsLogged}) => {
       title: "Home",
     },
     {
+      path: "/E-Banking",
+      title: "E-Banking",
+    },
+    {
       path: "/green_investment/green_projects",
       title: "Green Investment",
     },

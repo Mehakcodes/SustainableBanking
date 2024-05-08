@@ -8,6 +8,7 @@ const Navbar = () => {
       path: "/",
       title: "Home",
     },
+
     {
       path: "/green_investment/green_projects",
       title: "Green Investment",
