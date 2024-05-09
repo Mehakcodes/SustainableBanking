@@ -56,10 +56,14 @@ module.exports.signup = async (req, res, next) => {
           },
         });
 
-        // if(user)
-          return res.json({status: true, user});
+        console.log(user);
 
-        // return res.json({status: false});
+        if(user !== null){
+          console.log(user);
+          return res.json({status: true, user});
+        }
+
+        else return res.json({status: false, msg: "Invalid email or password!"});
     } 
     catch(e) {
       next(e);

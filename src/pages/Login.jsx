@@ -69,6 +69,7 @@ const Login = ({isLogged, setIsLogged}) => {
   return (
     <div className="whole-form-page">
       <div className="pt-24 px-16 pb-14">
+     <ToastContainer />
         <form onSubmit={handleSubmit} className="main bg-white form-login">
           <div className="font-bold text-3xl pb-6">Login to your account</div>
           <label htmlFor="email" className="pb-2 text-lg">E-mail ID / Customer ID</label>
@@ -105,7 +106,6 @@ const Login = ({isLogged, setIsLogged}) => {
           </span>
         </form>
       </div>
-      <ToastContainer />
     </div>
   );
 };
